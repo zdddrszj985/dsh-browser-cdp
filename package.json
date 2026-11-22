@@ -1,0 +1,51 @@
+{
+  "name": "dsh-browser-cdp",
+  "version": "0.1.0",
+  "description": "DSH plugin: open a URL in your local Chromium (Edge/Chrome) over CDP and get the rendered page back — the fallback for pages the built-in fetcher cannot handle.",
+  "type": "module",
+  "license": "MIT",
+  "author": "zdddrszj985",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zdddrszj985/dsh-browser-cdp.git"
+  },
+  "homepage": "https://github.com/zdddrszj985/dsh-browser-cdp#readme",
+  "bugs": {
+    "url": "https://github.com/zdddrszj985/dsh-browser-cdp/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "browser",
+    "chromium",
+    "cdp",
+    "web-fetch",
+    "screenshot"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "test",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/smoke.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+# dsh-browser-cdp — registers the browser_open tool into the host.
+- insert:
+    - id: browser-cdp
+      name: 'dsh-browser-cdp'
